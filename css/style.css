@@ -2,10 +2,10 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url(../img/cropped-ilmakuva.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #222;
+    color: #fff;
     background-attachment: fixed;
     font-family: 'Dubai Light', sans-serif;
     font-size: 2em;
@@ -34,28 +34,72 @@ body::before {
     animation-delay: 500ms;
 }
 
+/* Title container and animation */
 @keyframes titlePos  {
     0% {
         top: -10%;
+        padding: 64px 10rem 16px;
     }
     100% {
-        top: 10%;
+        top: 20%;
+        padding: 16px 8rem 16px;
     }    
 }
-.title-container {
-    position: absolute;
-    left: 50%;
-    top: -10%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 48px;
-    font-family: 'Dubai Medium', sans-serif;
-    color: white;
-    background-color: #000a;
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.section.intro-large {
+    background-image: url(/img/drone-shot.jpg);
+    z-index: -8;
+}
+.section.history-large {
+    background-image: url(/img/history.jpg);
+    z-index: -7;
+}
+.section.railway-large {
+    background-image: url(/img/railway-station.jpg);
+    z-index: -6;
+}
+.section.growth-large {
+    background-image: url(/img/bule.jpeg);
+    z-index: -5;
+}
+.section.infrastructure-large {
+    background-image: url(/img/infrastructure.jpg);
+    z-index: -4;
+}
+.section.healthcare-large {
+    background-image: url(/img/just.webp);
+    z-index: -3;
+}
+
+.section {
+    background-position-x:center;
+    background-repeat: none;
+    background-attachment: fixed;
+    font-size: 32px;
+    background-clip:padding-box;
+    background-size: cover;
+    padding: 8em;
+}
+.section p, h2 {
+    margin-left: 10%;
+    margin-right: 10%;
     padding: 16px;
-    padding-left: 8rem;
-    padding-right: 8rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    background-color: #000a;
     border-radius: 10px;
-    animation: titlePos 1s forwards;
-    animation-delay: 1s;
+    word-break: keep-all;
+}
+.section h2 {
+    margin-bottom: 1em;
+    align-content: center;
 }
